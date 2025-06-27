@@ -5,12 +5,16 @@
 -- BANCO DE DADOS: Oracle
 -- =====================================================================
 
+-- Endereços (criando primeiro para poder ser referenciado por PESSOA)
+INSERT INTO ENDERECO (CEP, Rua, Numero, Bairro, Cidade) VALUES ('51020000', 'Rua das Flores', '123', 'Boa Viagem', 'Recife');
+INSERT INTO ENDERECO (CEP, Rua, Numero, Bairro, Cidade) VALUES ('51030000', 'Avenida Parnamirim', '500', 'Parnamirim', 'Recife');
+
 -- Pessoas
-INSERT INTO PESSOA (CPF, Nome, Email, Data_Nascimento, Sexo) VALUES ('11122233344', 'Carlos Santana', 'carlos.santana@email.com', TO_DATE('1985-05-15', 'YYYY-MM-DD'), 'M');
-INSERT INTO PESSOA (CPF, Nome, Email, Data_Nascimento, Sexo) VALUES ('55566677788', 'Ana Carolina', 'ana.carolina@email.com', TO_DATE('1992-02-20', 'YYYY-MM-DD'), 'F');
-INSERT INTO PESSOA (CPF, Nome, Email, Data_Nascimento, Sexo) VALUES ('99988877766', 'Roberto Silva', 'roberto.silva@email.com', TO_DATE('1978-11-30', 'YYYY-MM-DD'), 'M');
-INSERT INTO PESSOA (CPF, Nome, Email, Data_Nascimento, Sexo) VALUES ('12345678900', 'Fernanda Lima', 'fernanda.lima@email.com', TO_DATE('1995-07-25', 'YYYY-MM-DD'), 'F');
-INSERT INTO PESSOA (CPF, Nome, Email, Data_Nascimento, Sexo) VALUES ('00987654321', 'Juliano Alves', 'juliano.alves@email.com', TO_DATE('1988-09-10', 'YYYY-MM-DD'), 'M');
+INSERT INTO PESSOA (CPF, Nome, Endereco_CEP, Email, Data_Nascimento, Sexo) VALUES ('11122233344', 'Carlos Santana', '51020000', 'carlos.santana@email.com', TO_DATE('1985-05-15', 'YYYY-MM-DD'), 'M');
+INSERT INTO PESSOA (CPF, Nome, Endereco_CEP, Email, Data_Nascimento, Sexo) VALUES ('55566677788', 'Ana Carolina', '51030000', 'ana.carolina@email.com', TO_DATE('1992-02-20', 'YYYY-MM-DD'), 'F');
+INSERT INTO PESSOA (CPF, Nome, Endereco_CEP, Email, Data_Nascimento, Sexo) VALUES ('99988877766', 'Roberto Silva', '51020000', 'roberto.silva@email.com', TO_DATE('1978-11-30', 'YYYY-MM-DD'), 'M');
+INSERT INTO PESSOA (CPF, Nome, Endereco_CEP, Email, Data_Nascimento, Sexo) VALUES ('12345678900', 'Fernanda Lima', '51030000', 'fernanda.lima@email.com', TO_DATE('1995-07-25', 'YYYY-MM-DD'), 'F');
+INSERT INTO PESSOA (CPF, Nome, Endereco_CEP, Email, Data_Nascimento, Sexo) VALUES ('00987654321', 'Juliano Alves', '51020000', 'juliano.alves@email.com', TO_DATE('1988-09-10', 'YYYY-MM-DD'), 'M');
 
 -- Telefones
 INSERT INTO PESSOA_TELEFONE(CPF, Telefone) VALUES ('11122233344', '81999887766');
