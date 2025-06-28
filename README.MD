@@ -29,3 +29,4 @@ Este repositório contém os scripts SQL para a criação e povoamento de um ban
 * [Nicolas Bezerra - nvgb]
 * [Esdras Albino - ehas]
 * [Rinaldo - rsbj]
+* [Victor Kemerer]
